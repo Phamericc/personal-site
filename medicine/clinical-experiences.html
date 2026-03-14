@@ -1,39 +1,496 @@
-Eric Pham
-	•	About
-	•	Medicine
-	•	Creator
-	•	Projects
-	•	Contact
-Let's Connect
-Home
-›
-Medicine
-›
-Clinical Experiences
-🏥
-MEDICINE & EDUCATION
-Clinical Experiences
-Reflections from shadowing, early clinical exposures, and patient encounters. The moments that reminded me why I chose this path — and a few that challenged me.
-Rotations
-Reflections
-Patient Care
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eric Pham's clinical experiences — shadowing, rotations, and patient encounters during DO school." />
+  <title>Clinical Experiences · Eric Pham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+/* ============================================================
+   ERIC PHAM — SHARED STYLES
+   Used by index.html and all medicine sub-pages
+   ============================================================ */
 
-Back to My DO Journey
-Pre-Clinical Shadowing
-What I observed before starting DO school — the specialties I shadowed, the physicians who shaped my thinking, and how those experiences influenced why I applied to osteopathic medicine.
-Content coming soon.
-Early Clinical Exposures at UIWSOM
-UIWSOM integrates clinical exposure early. This section covers the standardized patient encounters, clinical skills labs, and community health experiences from the first two years.
-Content coming soon.
-Clerkship Reflections
-Honest reflections from third and fourth year rotations — what each specialty taught me, what surprised me, and how patient interactions changed how I think about medicine.
-Content coming soon — will populate during clerkships.
-Memorable Patient Encounters
-The cases that stuck with me. Written with patient privacy protected. These are the stories that remind you what the work is actually for.
-Content coming soon.
-Eric Pham
-About
-Medicine
-Creator
-Contact
-© 2025 Eric Pham · UIWSOM
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --blue:        #007AFF;
+  --blue-light:  #E8F2FF;
+  --blue-hover:  #0066DD;
+  --white:       #FFFFFF;
+  --gray-1:      #F5F5F7;
+  --gray-2:      #E8E8ED;
+  --gray-3:      #D2D2D7;
+  --text-1:      #1D1D1F;
+  --text-2:      #6E6E73;
+  --text-3:      #AEAEB2;
+  --r-sm:        8px;
+  --r-md:        12px;
+  --r-lg:        18px;
+  --r-xl:        24px;
+  --shadow-xs:   0 1px 4px rgba(0,0,0,0.04);
+  --shadow-sm:   0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg:   0 8px 40px rgba(0,0,0,0.11);
+  --ease-fast:   all 0.18s ease;
+  --ease:        all 0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--text-1);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: 'Sora', sans-serif; color: var(--text-1); }
+p  { color: var(--text-2); line-height: 1.75; }
+a  { text-decoration: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* --- Layout --- */
+.container    { max-width: 1100px; margin: 0 auto; }
+.container-sm { max-width: 760px;  margin: 0 auto; }
+section       { padding: 7rem 2rem; }
+hr.divider    { height: 0.5px; background: var(--gray-2); border: none; margin: 0; }
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--blue);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+h2.heading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  margin-bottom: 0.5rem;
+}
+.section-intro { max-width: 560px; margin-top: 0.5rem; }
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 22px;
+  transition: var(--ease);
+  cursor: pointer;
+  border: none;
+}
+.btn-primary   { background: var(--blue); color: #fff; }
+.btn-primary:hover {
+  background: var(--blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0,122,255,0.28);
+}
+.btn-secondary { background: transparent; color: var(--text-1); border: 1px solid var(--gray-3); }
+.btn-secondary:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+.btn-white     { background: #fff; color: var(--blue); }
+.btn-white:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.13); }
+
+/* --- Tags --- */
+.tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; }
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--gray-1);
+  color: var(--text-3);
+  letter-spacing: 0.1px;
+}
+.tag-blue { background: var(--blue-light); color: var(--blue); }
+
+/* --- Badges --- */
+.badge        { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 10px; white-space: nowrap; }
+.badge-blue   { background: var(--blue-light); color: var(--blue); }
+.badge-orange { background: #FFF3E8; color: #D4640A; }
+
+/* ============================================================
+   NAV  (shared across all pages)
+   ============================================================ */
+#site-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 0.5px solid var(--gray-2);
+}
+#site-nav .nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 16px; color: var(--text-1); letter-spacing: -0.3px; }
+.nav-logo span { color: var(--blue); }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { font-size: 13px; color: var(--text-2); transition: color 0.2s; }
+.nav-links a:hover { color: var(--blue); }
+.nav-cta {
+  background: var(--blue); color: #fff;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+  padding: 7px 16px; border-radius: 20px; transition: var(--ease);
+}
+.nav-cta:hover { background: var(--blue-hover); transform: translateY(-1px); }
+
+/* ============================================================
+   FOOTER  (shared across all pages)
+   ============================================================ */
+footer { background: var(--white); border-top: 0.5px solid var(--gray-2); padding: 2.5rem 2rem; }
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.footer-brand { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 15px; color: var(--text-1); }
+.footer-brand span { color: var(--blue); }
+.footer-nav { display: flex; gap: 1.5rem; }
+.footer-nav a { font-size: 12px; color: var(--text-3); transition: color 0.2s; }
+.footer-nav a:hover { color: var(--blue); }
+.footer-copy { font-size: 12px; color: var(--text-3); }
+
+/* ============================================================
+   MEDICINE CARDS  (homepage grid)
+   ============================================================ */
+
+/* Section header glow — Apple-style depth behind heading */
+.medicine-header {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.medicine-header::before {
+  content: '';
+  position: absolute;
+  top: -40px; left: -60px;
+  width: 420px; height: 220px;
+  background: radial-gradient(ellipse at 30% 50%, rgba(0,122,255,0.07) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.medicine-header > * { position: relative; z-index: 1; }
+
+/* Card grid */
+.med-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* The card itself is an <a> tag */
+.med-card-link {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border: 0.5px solid var(--gray-2);
+  border-radius: 20px;
+  padding: 1.75rem 1.75rem 1.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: var(--shadow-xs);
+  min-height: 200px;
+}
+.med-card-link:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gray-3);
+}
+
+/* Top row: icon + arrow */
+.med-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.1rem;
+}
+.med-card-icon-wrap {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.ic-blue   { background: #EAF3FF; }
+.ic-green  { background: #E6F9F0; }
+.ic-purple { background: #F0EEFF; }
+.ic-teal   { background: #E5F6F6; }
+.ic-amber  { background: #FFF4E5; }
+.ic-rose   { background: #FFF0F0; }
+
+/* Arrow indicator */
+.med-card-arrow {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--gray-1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.med-card-arrow svg {
+  width: 12px; height: 12px;
+  stroke: var(--text-3);
+  transition: stroke 0.18s ease;
+}
+.med-card-link:hover .med-card-arrow {
+  transform: translate(2px, -2px);
+  background: var(--blue-light);
+}
+.med-card-link:hover .med-card-arrow svg { stroke: var(--blue); }
+
+/* Card body */
+.med-card-body { flex: 1; }
+.med-card-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin-bottom: 0.4rem;
+  color: var(--text-1);
+}
+.med-card-body p {
+  font-size: 13px;
+  color: var(--text-2);
+  line-height: 1.6;
+}
+
+/* Card footer tags */
+.med-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 1.2rem;
+}
+.med-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--gray-1);
+  color: var(--text-3);
+}
+.med-tag-blue { background: var(--blue-light); color: var(--blue); }
+
+/* ============================================================
+   MEDICINE SUB-PAGE LAYOUT
+   ============================================================ */
+.subpage-hero {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.subpage-hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: -100px;
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse at 30% 40%, rgba(0,122,255,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.subpage-hero .container-sm { position: relative; z-index: 1; }
+
+.subpage-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2rem;
+  font-size: 13px;
+  color: var(--text-3);
+}
+.subpage-breadcrumb a { color: var(--blue); transition: opacity 0.15s; }
+.subpage-breadcrumb a:hover { opacity: 0.7; }
+.subpage-breadcrumb span { color: var(--text-3); }
+
+.subpage-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  margin-bottom: 1.5rem;
+}
+.subpage-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.subpage-hero .intro {
+  font-size: 1.05rem;
+  color: var(--text-2);
+  max-width: 560px;
+  line-height: 1.8;
+}
+
+/* Content sections on sub-pages */
+.subpage-content {
+  padding: 0 2rem 6rem;
+}
+.subpage-content .container-sm { padding-top: 1rem; }
+
+.content-block {
+  background: var(--gray-1);
+  border-radius: 20px;
+  padding: 2rem 2.25rem;
+  margin-bottom: 14px;
+  border: 0.5px solid var(--gray-2);
+}
+.content-block h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.2px;
+}
+.content-block p {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.75;
+}
+.content-block .placeholder-note {
+  font-size: 12px;
+  color: var(--text-3);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--blue);
+  margin-bottom: 3rem;
+  transition: gap 0.18s ease;
+}
+.back-link:hover { gap: 10px; }
+.back-link svg { width: 14px; height: 14px; stroke: var(--blue); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .med-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .med-grid { grid-template-columns: 1fr; }
+  section { padding: 5rem 1.25rem; }
+  .nav-links { display: none; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-nav { justify-content: center; }
+  .subpage-hero { padding-top: 7rem; }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav id="site-nav">
+    <div class="nav-inner">
+      <a href="/personal-site/index.html" class="nav-logo">Eric <span>Pham</span></a>
+      <ul class="nav-links">
+        <li><a href="/personal-site/index.html#about">About</a></li>
+        <li><a href="/personal-site/index.html#medicine">Medicine</a></li>
+        <li><a href="/personal-site/index.html#creator">Creator</a></li>
+        <li><a href="/personal-site/index.html#projects">Projects</a></li>
+        <li><a href="/personal-site/index.html#contact">Contact</a></li>
+      </ul>
+      <a href="/personal-site/index.html#contact" class="nav-cta">Let's Connect</a>
+    </div>
+  </nav>
+
+  <div class="subpage-hero">
+    <div class="container-sm">
+      <div class="subpage-breadcrumb">
+        <a href="/personal-site/index.html">Home</a>
+        <span>›</span>
+        <a href="/personal-site/index.html#medicine">Medicine</a>
+        <span>›</span>
+        <span>Clinical Experiences</span>
+      </div>
+      <div class="subpage-icon ic-green">🏥</div>
+      <span class="section-label">Medicine &amp; Education</span>
+      <h1>Clinical Experiences</h1>
+      <p class="intro">Reflections from shadowing, early clinical exposures, and patient encounters. The moments that reminded me why I chose this path — and a few that challenged me.</p>
+      <div class="tag-row" style="margin-top:1.5rem;">
+        <span class="tag tag-blue">Rotations</span>
+        <span class="tag">Reflections</span>
+        <span class="tag">Patient Care</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="subpage-content">
+    <div class="container-sm">
+
+      <a href="/personal-site/index.html#medicine" class="back-link">
+        <svg viewBox="0 0 14 14" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor">
+          <path d="M11.5 7H2.5M2.5 7L6.5 3M2.5 7L6.5 11"/>
+        </svg>
+        Back to My DO Journey
+      </a>
+
+      <div class="content-block">
+        <h3>Pre-Clinical Shadowing</h3>
+        <p>What I observed before starting DO school — the specialties I shadowed, the physicians who shaped my thinking, and how those experiences influenced why I applied to osteopathic medicine.</p>
+        <p class="placeholder-note">Content coming soon.</p>
+      </div>
+
+      <div class="content-block">
+        <h3>Early Clinical Exposures at UIWSOM</h3>
+        <p>UIWSOM integrates clinical exposure early. This section covers the standardized patient encounters, clinical skills labs, and community health experiences from the first two years.</p>
+        <p class="placeholder-note">Content coming soon.</p>
+      </div>
+
+      <div class="content-block">
+        <h3>Clerkship Reflections</h3>
+        <p>Honest reflections from third and fourth year rotations — what each specialty taught me, what surprised me, and how patient interactions changed how I think about medicine.</p>
+        <p class="placeholder-note">Content coming soon — will populate during clerkships.</p>
+      </div>
+
+      <div class="content-block">
+        <h3>Memorable Patient Encounters</h3>
+        <p>The cases that stuck with me. Written with patient privacy protected. These are the stories that remind you what the work is actually for.</p>
+        <p class="placeholder-note">Content coming soon.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Eric <span>Pham</span></span>
+      <nav class="footer-nav">
+        <a href="/personal-site/index.html#about">About</a>
+        <a href="/personal-site/index.html#medicine">Medicine</a>
+        <a href="/personal-site/index.html#creator">Creator</a>
+        <a href="/personal-site/index.html#contact">Contact</a>
+      </nav>
+      <span class="footer-copy">© 2025 Eric Pham · UIWSOM</span>
+    </div>
+  </footer>
+
+</body>
+</html>
